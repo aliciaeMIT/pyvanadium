@@ -33,7 +33,6 @@ class AlloyOld:
                 "Weight percent dictionary must include at least 1 "
                 "element:weight to initialize new Alloy instance."
             )
-        # elif
 
     def _generate_element_instances(self):
         try:
