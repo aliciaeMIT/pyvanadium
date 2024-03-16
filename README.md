@@ -9,6 +9,7 @@ To install dependencies:
 
 
 
+
 Potential dependencies (TBD):
 - pydantic
 - pint
@@ -18,16 +19,27 @@ Potential dependencies (TBD):
 - numpy
 - matplotlib
 - pandas
+- pyzotero
 - plotly
 - bokeh
 - scipy
 - scikit-learn
-- flake8
-- black
-- isort
-- pre-commit
 - mypy
 - sphinx
 - pyvista
 - mayavi
-- 
+
+# For Developers
+
+For developers, also install dev requirements:
+`pip install -r requirements-dev.txt`
+
+Developer dependencies:
+- pre-commit
+- flake8
+- black
+- isort
+- pytest
+- pip-compile
+- pipreqs
+
