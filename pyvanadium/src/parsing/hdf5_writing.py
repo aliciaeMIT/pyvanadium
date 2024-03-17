@@ -5,4 +5,4 @@ import hdf5_settings
 # get sorted alphanumerically. For end-user convenience, we want to have a
 # consistent organization of the first level groups that makes sense for easy
 # navigation.
-h5.get_config().track_order = True
+hdf5_settings.enable_object_creation_order_tracking()

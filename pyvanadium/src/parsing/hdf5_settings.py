@@ -11,3 +11,8 @@ def enable_object_creation_order_tracking():
     h5.get_config().track_order = True
 
     return h5.get_config().track_order
+
+
+# By default, we want this to be enabled, so this should run when the file is
+# imported.
+enable_object_creation_order_tracking()
