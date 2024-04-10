@@ -19,7 +19,6 @@ def print_tree(name, obj):
         print("   " + offset * depth + name.split("/")[-1])
 
 
-# └──
 def print_group_structure(grp):
     print("")
     print("├──" + grp.name.split("/")[-1])
