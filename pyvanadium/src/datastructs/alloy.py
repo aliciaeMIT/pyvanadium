@@ -1,14 +1,23 @@
-from typing import List
+from typing import List, Optional
 
 # , Optional
 import pydantic as pdt
 import pymatgen.core as pg
 
 
+def convert_wppm_to_wt_percent(wppm):
+    return wppm / 10000.0
+
+
+def convert_wt_percent_to_wppm(wt_perc):
+    return wt_perc * 10000.0
+
+
 class Alloy(pdt.BaseModel):
     elements: List[pg.Element]
     composition: pg.Composition
     weight_percents: dict
+    impurities: Optional[dict]
 
 
 class AlloyBuilder:
@@ -68,6 +77,13 @@ if __name__ == "__main__":
         "V": wt_frac_v,
         "Cr": wt_frac_cr,
         "Ti": wt_frac_ti,
+    }
+
+    impurities = {
+        "O": 1001,
+        "N": 161,
+        "C": 360,
+        "Si": 0,
     }
 
     my_comp = pg.Composition.from_weight_dict(weights_v44)
