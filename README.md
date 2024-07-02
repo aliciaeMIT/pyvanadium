@@ -40,6 +40,7 @@ Developer dependencies:
 - black
 - isort
 - pytest
-- pip-compile
+- pip-tools
 - pipreqs
+- setuptools
 

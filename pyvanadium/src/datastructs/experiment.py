@@ -1,14 +1,21 @@
-import pydantic as pdt
+from typing import Annotated, Dict, List, Literal, Optional, Tuple
 
-# import pymatgen.core as pg
+import attrs
+import pinttrs
+
+from pyvanadium.src.datastructs.unit_registry import units
+
+pinttrs.set_unit_registry(units)
 
 
-class Experiment(pdt.BaseModel):
-    pass
+@attrs.define
+class ExperimentData:
+    citation: Dict
 
 
-class IrradiationExperiment:
-    pass
+@attrs.define
+class IrradiationParams:
+    dose: pinttrs.field(units=units.dpa)
 
 
 class ExperimentBuilder:

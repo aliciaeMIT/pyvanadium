@@ -1,3 +1,12 @@
 import h5py as h5
+import hdf5_settings
+import hdf5_writing
 
-test = h5.File("test.h5", "a")
+with h5.File("../../../database_design/test.h5", "r") as f:
+    print(f.keys())
+
+    if "Raw data" in f.keys():
+        rd = f["Raw data"]
+        print(rd.keys())
+
+    f.close()
